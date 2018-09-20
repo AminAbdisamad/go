@@ -11,4 +11,5 @@ func main() {
 	fmt.Println(math.Ceil(2.5))
 	fmt.Println(math.RoundToEven(2.5))
 	fmt.Println(math.Sqrt(32))
+	// fmt.Println(add.Add(5, 6))
 }
