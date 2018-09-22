@@ -11,5 +11,15 @@ func main() {
 	Users["Email"] = "Amin@gmail.com"
 	Users["Phone"] = "990-44-453"
 	Users["Address"] = "here"
+	// Display name
+	fmt.Println(Users["name"])
+	// Legth of users
+	fmt.Println(len(Users))
+
+	// Delete map value
+	delete(Users, "name")
+	Users["name"] = "Hassan Amin"
+	fmt.Println(Users["name"])
 	fmt.Println(Users)
+
 }
