@@ -22,4 +22,9 @@ func main() {
 	fmt.Println(Users["name"])
 	fmt.Println(Users)
 
+	// Create map and assign key values
+	Customers := map[string]string{
+		"Name": "Geedi", "Email": "Geedi@gmail.com", "Phone": "5757-484-453",
+	}
+	fmt.Println(Customers)
 }
