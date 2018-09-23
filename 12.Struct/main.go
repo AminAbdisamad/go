@@ -7,6 +7,7 @@ import (
 
 func main() {
 	customer1 := Customers{firstName: "hassan", lastName: "Amin", country: "Somalia", status: "Single", gender: "M", address: "Godey", phone: "555-667-433", age: 20}
+
 	// fmt.Println(customer1)
 	// fmt.Println(customer1.firstName)
 	customer1.firstName = "Ali"
@@ -31,13 +32,12 @@ func (c Customers) greeting() string {
 	return "Hi, My  Name is " + c.firstName + " " + c.lastName + " I'm " + strconv.Itoa(c.age) + " Years old " + c.status + " from " + c.country
 }
 
-// Method - Pointer reciever
+// Method - Pointer  reciever
 func (c *Customers) birthday() {
 	c.age++
 }
 
-// Pointer receiver method
+// Pointer  receiver method
 func (c *Customers) getMarried() {
 	c.status = "Married"
-
 }
