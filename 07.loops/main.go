@@ -7,6 +7,12 @@ func main() {
 	// 	fmt.Printf("Number %d\n", i)
 	// }
 	fmt.Println(fizzBuzz(100))
+	
+       // The init and post statements are optional.	
+	sum := 1
+	for ; sum < 1000; { sum += sum }
+	fmt.Println(sum)
+}
 }
 
 func fizzBuzz(n int) int {
