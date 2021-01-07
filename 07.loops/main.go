@@ -19,6 +19,8 @@ func main() {
 		sum += sum
 	}
 	fmt.Println(sum)
+	// Forever If you omit the loop condition it loops forever, so an infinite loop is compactly expressed.
+	for { fmt.Println("Invinite")
 }
 }
 
