@@ -4,7 +4,24 @@ import (
 	"fmt"
 )
 
+func sqrt(x float64) string {
+	if x < 0 {
+		return sqrt(-x) + "i"
+	}
+	return fmt.Sprint(math.Sqrt(x))
+}
+
+func confirm_age(age int) string {
+if age < 20 {return ("You can't be here")}
+return ("Old enough to do whatever you want :) ")
+}
+
 func main() {
+	
+	
+ fmt.Println(sqrt(2), sqrt(-4))
+ age := confirm_age(27)
+ fmt.Println(age)
 
 	//IF ELSE
 	color := "who"
