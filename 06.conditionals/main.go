@@ -11,9 +11,16 @@ func sqrt(x float64) string {
 	return fmt.Sprint(math.Sqrt(x))
 }
 
+func pow(x, n, lim float64) float64 {
+	if  v:= math.Pow(x, n);v < lim {
+		return v
+	}
+	return lim
+}
+
 func confirm_age(age int) string {
-if age < 20 {return ("You can't be here")}
-return ("Old enough to do whatever you want :) ")
+	if age < 20 {return ("You can't be here")}
+	return ("Old enough to do whatever you want :) ")
 }
 
 func main() {
