@@ -7,8 +7,8 @@ import (
 func main() {
 	// Creating maps
 	Users := make(map[string]string)
-	Users["name"] = "Mohamed Amin"
-	Users["Email"] = "Amin@gmail.com"
+	Users["name"] = "Mohamed"
+	Users["Email"] = "test@gmail.com"
 	Users["Phone"] = "990-44-453"
 	Users["Address"] = "here"
 	// Display name
@@ -18,7 +18,7 @@ func main() {
 
 	// Delete map value
 	delete(Users, "name")
-	Users["name"] = "Hassan Amin"
+	Users["name"] = "Hassan"
 	fmt.Println(Users["name"])
 	fmt.Println(Users)
 
@@ -26,5 +26,11 @@ func main() {
 	Customers := map[string]string{
 		"Name": "Geedi", "Email": "Geedi@gmail.com", "Phone": "5757-484-453",
 	}
-	fmt.Println(Customers)
+
+	// Looping through map
+	for  _,value := range Customers {
+		fmt.Println(value)
+
+	}
+	// fmt.Println(Customers)
 }

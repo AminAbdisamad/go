@@ -7,6 +7,7 @@ func main (){
 	// 1. fmt.Print -> Prints without newline
 	// 2. fmt.Prinln -> Prints with a new line
 	// 3. fmt.Printf -> is used for formatted strings
+	// 4. fmt.Sprintf -> (Save formatted strings) It's similar to Printf
 	// see examples
 	firstName, lastName := "Hassan", "Ahmed";
 	age := 30;
@@ -19,7 +20,7 @@ func main (){
 	//2.  Printing with newline
 	fmt.Println("My First Name is ", firstName, " And My Last Name is ", lastName)
 
-	//3. FORMATED STRINGS
+	//3. FORMATED STRINGS (fmt.Printf)
 	// %v - default format for variables
 	// %q - quoto inside string variables "quit"
 	// %T - returns type of the variable
@@ -30,4 +31,9 @@ func main (){
 	fmt.Printf("The price is %f USD per unit\n", price)
 	// Limit number of zeros for when printing float variable
 	fmt.Printf("The price is %0.2f USD per unit\n", price)
+
+	//4. FORMATED STRINGS with Sprintf
+	var message = fmt.Sprintf("My name is %T and I'm %T years old %T \n", firstName, age,price);
+	fmt.Println("Message is ", message)
+
 }

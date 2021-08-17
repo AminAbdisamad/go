@@ -7,21 +7,34 @@ func main() {
 	// 	fmt.Printf("Number %d\n", i)
 	// }
 	fmt.Println(fizzBuzz(100))
-	
-       // The init and post statements are optional.	
+
+       // The init and post statements are optional.
 	sum := 1
 	for ; sum < 1000; { sum += sum }
 	fmt.Println(sum)
-	
+
 	// For is Go's "while"
-	sum := 1
+	// sum := 1
 	for sum < 1000 {
 		sum += sum
 	}
 	fmt.Println(sum)
 	// Forever If you omit the loop condition it loops forever, so an infinite loop is compactly expressed.
-	for { fmt.Println("Invinite")
-}
+	// for { fmt.Println("Invinite")}
+
+	// ! Looping through slices or strings
+	var names = []string{"Adi","Ali","Has","Kaz"}
+	// Example 1
+	for i:=0; i<len(names); i++{
+		fmt.Println(names[i])
+	}
+
+	// Example 2
+	for  _, value := range names {
+		fmt.Println( value)
+	}
+
+
 }
 
 func fizzBuzz(n int) int {
