@@ -1,5 +1,29 @@
 package main
 
+/****
+Summary
+
+Defer
+- used to delay the execution of statement until function exits
+- useful to group "open and close" function together
+- run LIFO - last-in first-out
+- Arguments evaluated at the time defer is executed, not time of called function executed
+
+Panic
+- Ocur when application can't continue at all
+
+-Recover
+- used to recover from panic
+- only useful in defered functions
+
+
+
+
+
+
+
+****/
+
 import (
 	"fmt"
 	"io/ioutil"
@@ -27,7 +51,7 @@ func getRobotsFromGoogle(){
 func serveInternet(){
 	http.HandleFunc("/", func(rw http.ResponseWriter, r *http.Request) {
 		rw.Write([]byte("Hello world"))
-		fmt.Println("Server started on port 8080 ...")
+		log.Println("Server started on port 8080 ...")
 	})
 	err:= http.ListenAndServe(":8080",nil)
 	if err != nil{
@@ -47,11 +71,11 @@ func panicker(){
 }
 func main(){
 
-	fmt.Println("start")
-	panicker()
-	fmt.Println("end")
+	// fmt.Println("start")
+	// panicker()
+	// fmt.Println("end")
 
 	// Panics happen after defer statement is executed
 
-
+	serveInternet()
 }
